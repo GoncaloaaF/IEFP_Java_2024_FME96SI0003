@@ -25,6 +25,8 @@ public class Main {
         System.out.println( 10 / 3);
         System.out.println("Ola Mundo " + 2024);
         System.out.println("Ola Mundo " + "Texto 2");
+        System.out.println( "10" + "3"); // "10" + "3" -> "103"
+
 
 
 
