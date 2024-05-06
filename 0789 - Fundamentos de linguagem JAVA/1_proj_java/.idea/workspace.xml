@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed18e2ff-3342-4bc0-b0a4-cb3b13395018" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_proj_java.iml" afterDir="false" />
+    <list default="true" id="ed18e2ff-3342-4bc0-b0a4-cb3b13395018" name="Changes" comment="\t e \n">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +13,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "GoncaloaaF"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/GoncaloaaF/IEFP_Java_2024_FME96SI0003.git",
+    "accountId": "5af1ad69-aa09-4c51-a74a-1342da3e6c80"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 8
 }]]></component>
@@ -58,12 +73,35 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1714999020264</updated>
-      <workItem from="1714999021335" duration="1626000" />
+      <workItem from="1714999021335" duration="2932000" />
     </task>
+    <task id="LOCAL-00001" summary="demo soma txt">
+      <option name="closed" value="true" />
+      <created>1715001255602</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715001255602</updated>
+    </task>
+    <task id="LOCAL-00002" summary="\t e \n">
+      <option name="closed" value="true" />
+      <created>1715002019473</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715002019473</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="escrever para a consola" />
+    <MESSAGE value="demo soma txt" />
+    <MESSAGE value="\t e \n" />
+    <option name="LAST_COMMIT_MESSAGE" value="\t e \n" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
