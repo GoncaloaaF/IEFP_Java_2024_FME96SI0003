@@ -3,6 +3,7 @@
 public class Main {
     public static void main(String[] args) {
 
+
         // Comentario numa linha
 
         /*
@@ -27,7 +28,20 @@ public class Main {
         System.out.println("Ola Mundo " + "Texto 2");
         System.out.println( "10" + "3"); // "10" + "3" -> "103"
 
+        System.out.println("txtxasasdsad");
 
+        /*
+            \n -> new Line -> muda de linha
+            \t -> tab -> da um tab
+         */
+
+        System.out.println("Linha 1\nLinha 2");
+        System.out.println("inicio pos tab");
+        System.out.println("inicio\tpos tab");
+        System.out.println("inicio\tpos tab");
+
+        System.out.println("Nome:\tGonçalo");
+        System.out.println("Morada:\tSintra");
 
 
     }
