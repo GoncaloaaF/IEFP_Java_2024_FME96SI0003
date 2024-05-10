@@ -1,3 +1,9 @@
+import java.util.Properties;
+
+
+
+
+
 public class Main {
     public static void main(String[] args) {
 
@@ -17,6 +23,10 @@ public class Main {
         int num = 10;
 
         System.out.println("O número informado foi " + num);
+
+
+        System.out.println(
+                "user.dir: " + System.getProperty("teste"));
 
     }
 }
