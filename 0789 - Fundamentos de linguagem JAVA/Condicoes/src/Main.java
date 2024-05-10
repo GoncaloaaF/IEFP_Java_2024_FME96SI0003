@@ -83,7 +83,6 @@ public class Main {
         /*
             quando temos 2 valores bool não podem ser aplicadas comparações de > ou <
             uma vez que nao se consegue definir o que e maior
-
          */
 
 
