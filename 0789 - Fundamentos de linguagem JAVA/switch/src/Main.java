@@ -3,8 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-
+        sc.next
         System.out.println("Qual o mes? ");
         int mes = sc.nextInt();
 
@@ -27,6 +26,7 @@ public class Main {
 
 
         //  { }  <- em java define um bloco
+
 
 
          switch (mes) {
