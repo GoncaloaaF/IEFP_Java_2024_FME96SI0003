@@ -60,7 +60,7 @@ public class Main {
         for(int i: notas2){  // forEach
             // conta os valores diferentes de 0
 
-            if ( i != 0){ // != <- não igual <- diferente <- ! <- negação
+            if (i != 0){ // != <- não igual <- diferente <- ! <- negação
 
                 notasL += 1; // notasL = notasL + 1
             }
@@ -72,7 +72,32 @@ public class Main {
         }
         System.out.println("Estõa lançadas "+ notasL + " notas\n" );
 
+
+        int[] notas5 = {10,17,9,8};
+
+        double mediaNotas = calcMedia(notas5);
+
+        System.out.println("a media e de: " + mediaNotas);
+
+
+        int[] notas6 = {10,17,19,18};
+        double mediaNotas2 = calcMedia(notas6);
+
+        System.out.println("a media e de: " + mediaNotas2);
     }
 
+
+    public static double calcMedia(int[] notas){
+        double total = 0;
+
+        for (int i: notas){
+            total += i;
+        }
+
+        double media = total/notas.length;
+
+        return media;
+
+    }
 
 }
