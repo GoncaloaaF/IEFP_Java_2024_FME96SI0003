@@ -3,6 +3,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
+        //isto faz isto e isto e isto
         int[] notas = {10,17,9,8};
 
         System.out.println(notas[2]);
