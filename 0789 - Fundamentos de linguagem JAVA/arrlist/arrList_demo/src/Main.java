@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<String> list = new ArrayList<>();
 
         list.add("A");
         list.add("B");
@@ -29,11 +29,5 @@ public class Main {
         list.set(0, "Novo valor na pos 0");
 
         System.out.println(list);
-
-
-
-
-
-
     }
 }

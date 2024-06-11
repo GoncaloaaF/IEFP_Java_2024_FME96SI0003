@@ -1,24 +1,25 @@
+import java.util.ArrayList;
+
 public class Loja {
     private String nome;
-    private Produto[] listaProduto;
+    private ArrayList<Produto> listaProduto;
 
     public Loja(String nome){
         this.nome = nome;
-        this.listaProduto = new Produto[3];
+        this.listaProduto = new ArrayList<>();
     }
 
 
-    public void addProduto(int pos, Produto prod) {
-        this.listaProduto[pos] = prod;
+    public void addProduto(Produto prod) {
+        this.listaProduto.add(prod);
     }
 
-    public void addProduto(int pos,
-                           String nome,
+    public void addProduto(String nome,
                            float preco,
                            int quantidade,
                            catProduto categoria){
 
-        this.listaProduto[pos] = new Produto(nome, preco, quantidade, categoria);
+        this.listaProduto.add(new Produto(nome, preco, quantidade, categoria));
     }
 
 
@@ -47,7 +48,7 @@ public class Loja {
         return nome;
     }
 
-    public Produto[] getListaProduto() {
+    public ArrayList<Produto> getListaProduto() {
         return listaProduto;
     }
 }

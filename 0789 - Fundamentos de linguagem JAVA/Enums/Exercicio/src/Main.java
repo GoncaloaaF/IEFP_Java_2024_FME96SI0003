@@ -33,9 +33,9 @@ public class Main {
 
         myLoja = new Loja("Loja cool");
 
-        myLoja.addProduto(0, "iPhone", 1200, 10, catProduto.smartphones);
-        myLoja.addProduto(1, "Imac", 3000, 10, catProduto.PCs);
-        myLoja.addProduto(2, "hp", 800, 10, catProduto.PCs);
+        myLoja.addProduto("iPhone", 1200, 10, catProduto.smartphones);
+        myLoja.addProduto("Imac", 3000, 10, catProduto.PCs);
+        myLoja.addProduto( "hp", 800, 10, catProduto.PCs);
 
 
 
