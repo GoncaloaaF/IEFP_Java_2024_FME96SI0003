@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
 
 
@@ -40,6 +42,24 @@ public class Main {
 
         int i = carro1.getIdade();
         System.out.println(i);
+
+
+        Scanner sc = new Scanner(System.in);
+
+
+
+        Pessoa p1 = new Pessoa(1.20f, "Rui", 19, 50 );
+
+        System.out.println(p1.getAltura());
+        p1.envelhercer();
+        System.out.println(p1.getAltura());
+        p1.envelhercer();
+        System.out.println(p1.getAltura());
+        p1.envelhercer();
+        System.out.println(p1.getAltura());
+
+
+
 
 
     }

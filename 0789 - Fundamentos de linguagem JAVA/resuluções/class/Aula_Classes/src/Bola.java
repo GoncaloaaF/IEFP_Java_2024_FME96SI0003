@@ -1,10 +1,6 @@
 /*
-
-
-
  trocaCor (setCor)
  mostraCor (showCor)
-
  */
 
 
