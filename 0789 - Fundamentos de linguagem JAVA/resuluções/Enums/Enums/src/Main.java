@@ -18,23 +18,16 @@ public class Main {
 
         Pessoa p = new Pessoa("nome", 21, "", Genero.MASCULINO);
         float nota = 50;
-        Avaliacao av;
+        Avaliacao avaliacao = getAvaliacao(nota);
 
-        if(nota < 30){
-            av = Avaliacao.MUITO_FRACO;
-        } else if (nota < 50) {
-            av = Avaliacao.FRACO;
-        } else if (nota < 70) {
-            av = Avaliacao.MEDIO;
-        }else if (nota < 90) {
-            av = Avaliacao.BOM;
-        }else{
-            av = Avaliacao.MUITO_BOM;
-        }
-        System.out.println(av);
+        System.out.println(avaliacao);
 
+        System.out.println("-----------------");
 
-        System.out.println("Hello world!");
+        System.out.println(Avaliacao.MUITO_BOM);
+
+        System.out.println("-----------------");
+
 
         int idade;
 
@@ -58,5 +51,23 @@ public class Main {
 
 
     } // main
-    
+
+    public static Avaliacao getAvaliacao(float nota){
+        Avaliacao av;
+
+        if(nota < 30){
+            av = Avaliacao.MUITO_FRACO;
+        } else if (nota < 50) {
+            av = Avaliacao.FRACO;
+        } else if (nota < 70) {
+            av = Avaliacao.MEDIO;
+        }else if (nota < 90) {
+            av = Avaliacao.BOM;
+        }else{
+            av = Avaliacao.MUITO_BOM;
+        }
+
+        return av;
+
+    }
 }
