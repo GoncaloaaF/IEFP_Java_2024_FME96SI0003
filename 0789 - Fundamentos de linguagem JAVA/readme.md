@@ -2,15 +2,15 @@
 
 * Tipos de dados
 * Var
-* Converter tidos de dados (ex: .toInt())
+* Converter tidos de dados (ex: `.`oInt()`)
 * And e or
 * Condições
-  * if /else if / else
+  * `if` / `else if` / `else`
   * switch
 * Loops
-  * for
-  * foreach (for(int i: listaInts) )
-  * while
+  * `for`
+  * foreach (`for(int i:  listaInts)` )
+  * `while`
   * do while
 * Funções
   * void 
