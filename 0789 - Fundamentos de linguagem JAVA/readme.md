@@ -13,7 +13,7 @@
 * And e or
 * Condições
   * `if` / `else if` / `else`
-  * switch
+  * `switch`
 * Loops
   * `for`
   * foreach (`for(int i:  listaInts)` )
@@ -29,6 +29,8 @@
   * private 
   * static
   * `toString()`
+  * Herança
+   * Override  
 
 
 
