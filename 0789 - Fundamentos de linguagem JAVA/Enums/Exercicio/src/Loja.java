@@ -3,6 +3,8 @@ import java.util.ArrayList;
 public class Loja {
     private String nome;
     private ArrayList<Produto> listaProduto;
+    //Lista de clientes
+        //lista de pordutos comprados
 
     public Loja(String nome){
         this.nome = nome;
