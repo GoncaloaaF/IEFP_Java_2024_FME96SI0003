@@ -2,6 +2,11 @@
 
 * Tipos de dados
 * Var
+* Operações
+ * `++`
+ * `--`
+ * `-=`
+ * `+=` 
 * Converter tidos de dados
  * `.toInt()`
  * `Integer.parseInt(val)` 
