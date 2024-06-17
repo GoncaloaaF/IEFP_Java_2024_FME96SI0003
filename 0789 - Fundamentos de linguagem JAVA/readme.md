@@ -2,7 +2,9 @@
 
 * Tipos de dados
 * Var
-* Converter tidos de dados (ex: `.`oInt()`)
+* Converter tidos de dados
+ * `.toInt()
+ * `Integer.parseInt(val)` 
 * And e or
 * Condições
   * `if` / `else if` / `else`
