@@ -59,6 +59,27 @@ public class Main {
         Agenda.myAgenda.editarContacto(0, "Novo Nome Cool");
 
         Agenda.myAgenda.listarContactos();
+
+
+        Contacto ctx = Agenda.myAgenda.findContacto("Novo Nome Cool");
+
+        System.out.println(ctx.toString());
+
+
+
+
+        /*
+
+        criarem um menu
+        tornarem a app funcional
+
+        int opt;
+        switch(opt){
+
+
+        }
+
+         */
     }
 
 }

@@ -10,13 +10,9 @@ public class Agenda {
     public Agenda() {
         this.listaContactos = new ArrayList<>();
     }
-/*
 
-editar contacto
--- pesquisar por nome<--- ?
 
- */
-
+    // Garantir que não são add nomes duplicados
     public Boolean addContacto(Contacto contacto) {
         return this.listaContactos.add(contacto);
     }
@@ -69,7 +65,6 @@ editar contacto
         contacto.setNome(novo_nome);
         contacto.setTelefone(novo_telefone);
     }
-cd 
 
     public void editarContacto(int indexContato, String novo_nome ) {
         Contacto contacto = this.listaContactos.get(indexContato);
@@ -82,6 +77,21 @@ cd
         contacto.setTelefone(novo_telefone);
     }
 
+
+    public Contacto findContacto(String nome){
+
+        for(Contacto contacto: this.listaContactos){
+            if (contacto.getNome().equals(nome)){
+                return contacto;
+            }
+
+        }
+
+        return null;
+
+
+
+    }
 
 
 }
