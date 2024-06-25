@@ -1,2 +1,6 @@
-package PACKAGE_NAME;public class oMeuErro {
+public class oMeuErro extends Exception{
+
+    public oMeuErro(String msg) {
+        super(msg);
+    }
 }

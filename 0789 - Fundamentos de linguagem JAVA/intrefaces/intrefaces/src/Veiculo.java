@@ -1,2 +1,6 @@
-package PACKAGE_NAME;public interface Veiculo {
+public interface Veiculo {
+
+    String tipo();
+    String marca();
+    String modelo();
 }
