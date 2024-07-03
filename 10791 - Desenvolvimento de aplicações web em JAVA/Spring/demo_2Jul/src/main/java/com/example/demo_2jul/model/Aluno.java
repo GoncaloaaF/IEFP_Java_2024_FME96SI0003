@@ -18,22 +18,10 @@ public class Aluno implements Serializable {
     private UUID id;
     private String nome;
     private int idade;
-    private Double media;
-    private Double media2;
-    private int novoCampo;
-     private int novoCampo2;
-
-     @ManyToOne
-     private Turma turma;
 
 
-    public int getNovoCampo() {
-        return novoCampo;
-    }
 
-    public void setNovoCampo(int novoCampo) {
-        this.novoCampo = novoCampo;
-    }
+
 
     public UUID getId() {
         return id;
@@ -59,19 +47,4 @@ public class Aluno implements Serializable {
         this.idade = idade;
     }
 
-    public Double getMedia() {
-        return media;
-    }
-
-    public void setMedia(Double media) {
-        this.media = media;
-    }
-
-    public Double getMedia2() {
-        return media2;
-    }
-
-    public void setMedia2(Double media2) {
-        this.media2 = media2;
-    }
 }
