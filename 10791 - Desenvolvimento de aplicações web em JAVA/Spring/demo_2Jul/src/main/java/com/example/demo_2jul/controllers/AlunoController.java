@@ -9,12 +9,11 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
 
 @RestController
 public class AlunoController {
@@ -26,6 +25,7 @@ public class AlunoController {
     public ResponseEntity<Aluno> salvarAluno(@RequestBody @Valid AlunoDTO alunoDTO) {
         Aluno aluno = new Aluno();
         BeanUtils.copyProperties(alunoDTO, aluno);
+        aluno.criarUsr();
         return ResponseEntity.status(HttpStatus.CREATED).body(alunoRepo.save(aluno));
     }
 
@@ -38,5 +38,22 @@ public class AlunoController {
 
     //findById
 
+        //devolve um Object e não um Aluno pq não posso grantir que não será pedido um aluno que não existe
+
+    @GetMapping("/alunos/{id}")
+    public ResponseEntity<Object> buscarAluno(@PathVariable UUID id) {
+
+        Optional<Aluno> aluno = alunoRepo.findById(id); // é Optional pq o Aluno pode não existir
+
+        if (aluno.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"msg\": \"o Aluno não Existe\",  \"erro\":" + HttpStatus.NOT_FOUND.value() +"}");
+        }
+        
+        return ResponseEntity.ok(aluno.get());
+
+    }
+
+
+    //query  <- challenge
 
 }

@@ -18,9 +18,12 @@ public class Aluno implements Serializable {
     private UUID id;
     private String nome;
     private int idade;
+    private String usr;
 
 
-
+    public void criarUsr(){
+        this.usr = this.nome.replace(" ", "")+this.idade;
+    }
 
 
     public UUID getId() {
@@ -47,4 +50,11 @@ public class Aluno implements Serializable {
         this.idade = idade;
     }
 
+    public String getUsr() {
+        return usr;
+    }
+
+    public void setUsr(String usr) {
+        this.usr = usr;
+    }
 }
