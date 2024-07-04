@@ -48,12 +48,14 @@ public class AlunoController {
         if (aluno.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"msg\": \"o Aluno não Existe\",  \"erro\":" + HttpStatus.NOT_FOUND.value() +"}");
         }
-        
+
         return ResponseEntity.ok(aluno.get());
 
     }
 
+    //usar query param  <- challenge 1 - localhost:8080/alunos?id=.....
 
-    //query  <- challenge
+
+    //query  <- challenge 2
 
 }
