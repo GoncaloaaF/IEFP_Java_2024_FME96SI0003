@@ -7,7 +7,9 @@ import com.example.demo_mvc.service.FoodService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class FoodServiceImpl implements FoodService {
@@ -22,13 +24,25 @@ public class FoodServiceImpl implements FoodService {
     @Override
     public List<FoodDto> findAllFoods() {
         List<Food> allFood = foodRepo.findAll();
+        /*
+
+        // Versão mais expressiva:
 
 
-        return List.of();
+        List<FoodDto> foodDtoList;
+
+        foodDtoList = allFood.stream().map(this::convertFoodDto).collect(Collectors.toList());
+        //  allFood.stream() <=> valor1 Valor2 valor3 valor4 .... valorN
+
+        return foodDtoList;
+
+         */
+
+        return allFood.stream().map(this::convertFoodDto).collect(Collectors.toList());
     }
 
 
-    public FoodDto mapToFoodDto(Food food) {
+    private FoodDto convertFoodDto(Food food) {
 
         FoodDto foodDto = FoodDto.builder()
                 .id(food.getId())

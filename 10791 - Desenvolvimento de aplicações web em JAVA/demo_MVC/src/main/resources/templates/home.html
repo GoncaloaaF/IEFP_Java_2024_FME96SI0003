@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1> Home Page </h1>
+<h3 th:text="${nome}"> </h3>
+
+<div th:each="food: ${foods}">
+    <img th:src="${food.getImageURL()}">
+    <p th:text="${food.getName()}"> </p>
+    <p th:text="${food.getPrice()}"></p>
+</div>
+
+
+
+</body>
+</html>
