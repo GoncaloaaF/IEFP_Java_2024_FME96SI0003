@@ -16,12 +16,13 @@ import java.util.Optional;
 import java.util.UUID;
 
 @RestController
+@RequestMapping("alunos")
 public class AlunoController {
 
     @Autowired
     AlunoRepo alunoRepo;
 
-    @PostMapping("/alunos")
+    @PostMapping
     public ResponseEntity<Aluno> salvarAluno(@RequestBody @Valid AlunoDTO alunoDTO) {
         Aluno aluno = new Aluno();
         BeanUtils.copyProperties(alunoDTO, aluno);
@@ -29,19 +30,12 @@ public class AlunoController {
         return ResponseEntity.status(HttpStatus.CREATED).body(alunoRepo.save(aluno));
     }
 
-
-    @GetMapping("/alunos")
-    public ResponseEntity<List<Aluno>> listarAlunos() {
-        return ResponseEntity.ok(alunoRepo.findAll());
-    }
-
-
     //findById
 
         //devolve um Object e não um Aluno pq não posso grantir que não será pedido um aluno que não existe
 
-    @GetMapping("/alunos/{id}")
-    public ResponseEntity<Object> buscarAluno(@PathVariable UUID id) {
+    @GetMapping("/{id}")
+    public ResponseEntity<Object> findAluno(@PathVariable UUID id) {
 
         Optional<Aluno> aluno = alunoRepo.findById(id); // é Optional pq o Aluno pode não existir
 
@@ -53,9 +47,29 @@ public class AlunoController {
 
     }
 
+   @GetMapping
+    public ResponseEntity<List<Aluno>> listarAlunos() {
+        return ResponseEntity.ok(alunoRepo.findAll());
+    }
+
+
+     @GetMapping("{nome}")
+    public ResponseEntity<Aluno> getAluno(@PathVariable String nome) {
+        return ResponseEntity.ok(alunoRepo.findByNome(nome));
+    }
+
     //usar query param  <- challenge 1 - localhost:8080/alunos?id=.....
+    @GetMapping("/byId")
+    public ResponseEntity<Object> findAluno2(@RequestParam UUID id) {
 
+        Optional<Aluno> aluno = alunoRepo.findById(id); // é Optional pq o Aluno pode não existir
 
-    //query  <- challenge 2
+        if (aluno.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("{\"msg\": \"o Aluno não Existe\",  \"erro\":" + HttpStatus.NOT_FOUND.value() +"}");
+        }
+
+        return ResponseEntity.ok(aluno.get());
+
+    }
 
 }

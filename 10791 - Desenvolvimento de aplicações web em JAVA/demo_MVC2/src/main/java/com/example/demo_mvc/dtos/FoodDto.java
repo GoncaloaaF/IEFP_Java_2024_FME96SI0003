@@ -17,6 +17,4 @@ public class FoodDto {
     private String imageURL;
     private LocalDateTime createTime;
     private LocalDateTime updateTime;
-
-
 }

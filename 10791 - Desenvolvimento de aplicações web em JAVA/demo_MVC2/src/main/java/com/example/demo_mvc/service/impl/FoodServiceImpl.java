@@ -28,7 +28,6 @@ public class FoodServiceImpl implements FoodService {
 
         // Versão mais expressiva:
 
-
         List<FoodDto> foodDtoList;
 
         foodDtoList = allFood.stream().map(this::convertFoodDto).collect(Collectors.toList());
@@ -56,7 +55,18 @@ public class FoodServiceImpl implements FoodService {
         return foodDto;
     }
 
+private Food convertToFood(FoodDto foodDto) {
+
+        return null;
+}
 
 
+    @Override
+    public Food save(Food f) {
 
+        if (f.getName().isEmpty()){
+            return null;
+        }
+        return this.foodRepo.save(f);
+    }
 }

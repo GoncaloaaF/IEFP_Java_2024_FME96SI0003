@@ -26,10 +26,12 @@ public class Food {
     private String name;
     private double price;
     private String imageURL;
+
     @CreationTimestamp
     private LocalDateTime createTime;
     @UpdateTimestamp
     private LocalDateTime updateTime;
+
 
 
 }

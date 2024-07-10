@@ -7,7 +7,4 @@ public interface FoodRepo extends JpaRepository<Food, Long> {
 
     // Select * from Food where name = "name"
     public Food findByName(String name);
-
-
-
 }
