@@ -7,7 +7,6 @@ import com.example.demo_mvc.service.FoodService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -30,18 +29,18 @@ public class FoodServiceImpl implements FoodService {
 
         List<FoodDto> foodDtoList;
 
-        foodDtoList = allFood.stream().map(this::convertFoodDto).collect(Collectors.toList());
+        foodDtoList = allFood.stream().map(this::foodToFoodDto).collect(Collectors.toList());
         //  allFood.stream() <=> valor1 Valor2 valor3 valor4 .... valorN
 
         return foodDtoList;
 
          */
 
-        return allFood.stream().map(this::convertFoodDto).collect(Collectors.toList());
+        return allFood.stream().map(this::foodToFoodDto).collect(Collectors.toList());
     }
 
 
-    private FoodDto convertFoodDto(Food food) {
+    private FoodDto foodToFoodDto(Food food) {
 
         FoodDto foodDto = FoodDto.builder()
                 .id(food.getId())
@@ -55,9 +54,17 @@ public class FoodServiceImpl implements FoodService {
         return foodDto;
     }
 
-private Food convertToFood(FoodDto foodDto) {
+private Food foodDtoToFood(FoodDto foodDto) {
+         Food food = Food.builder()
+                .id(foodDto.getId())
+                .name(foodDto.getName())
+                .imageURL(foodDto.getImageURL())
+                .price(foodDto.getPrice())
+                .createTime(foodDto.getCreateTime())
+                .updateTime(foodDto.getUpdateTime())
+                .build();
 
-        return null;
+        return food;
 }
 
 
@@ -69,4 +76,18 @@ private Food convertToFood(FoodDto foodDto) {
         }
         return this.foodRepo.save(f);
     }
+
+    @Override
+    public FoodDto findFoodById(Long id) {
+        Food food = this.foodRepo.findById(id).get();
+        return foodToFoodDto(food);
+    }
+
+    @Override
+    public FoodDto updateFood(FoodDto foodDto) {
+        Food food = foodDtoToFood(foodDto);
+        this.foodRepo.save(food);
+       return null;
+    }
+
 }

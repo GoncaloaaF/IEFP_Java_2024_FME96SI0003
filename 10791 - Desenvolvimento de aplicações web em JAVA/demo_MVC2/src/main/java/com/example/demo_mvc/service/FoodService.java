@@ -10,4 +10,9 @@ public interface FoodService {
     public List<FoodDto> findAllFoods();
     public Food save(Food f);
 
+    public FoodDto findFoodById(Long id);
+
+
+    public FoodDto updateFood(FoodDto foodDto);
+
 }

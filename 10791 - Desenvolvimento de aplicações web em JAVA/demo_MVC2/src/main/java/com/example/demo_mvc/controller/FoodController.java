@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -62,6 +63,31 @@ public class FoodController {
         }
         return "redirect:/menu";
     }
+
+    @GetMapping("/food/{foodId}")
+    public String showFood(@PathVariable("foodId") Long foodId, Model model) {
+        FoodDto food = this.foodService.findFoodById(foodId);
+        model.addAttribute("food", food);
+        return "showFood";
+    }
+
+
+    @GetMapping("/food/{foodId}/edit")
+    public String eidtFoodView(@PathVariable("foodId") Long foodId, Model model) {
+        FoodDto food = this.foodService.findFoodById(foodId);
+        model.addAttribute("food", food);
+        return "editFood";
+    }
+
+
+
+    @PostMapping("/food/{foodId}/edit")
+    public String eidtFood(@PathVariable("foodId") Long foodId, @ModelAttribute("food") FoodDto food) {
+        food.setId(foodId);
+        foodService.updateFood(food);
+        return "redirect:/menu";
+    }
+    
 }
 
 
